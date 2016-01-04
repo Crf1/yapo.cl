@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @publication.Precio %>
+</p>
+
+<p>
+  <strong>Titulo:</strong>
+  <%= @publication.Titulo %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @publication.Descripcion %>
+</p>
+
+<%= link_to 'Editar', edit_publication_path(@publication) %> |
+<%= link_to 'Atrás', publications_path %>

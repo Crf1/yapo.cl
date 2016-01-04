@@ -1,0 +1,10 @@
+Searching 180 files for "update publication"
+
+/home/ilian/yapo.cl/test/controllers/publications_controller_test.rb:
+   35    end
+   36  
+   37:   test "should update publication" do
+   38      patch :update, id: @publication, publication: { Descripcion: @publication.Descripcion, Precio: @publication.Precio, Titulo: @publication.Titulo }
+   39      assert_redirected_to publication_path(assigns(:publication))
+
+1 match in 1 file

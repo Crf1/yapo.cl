@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lista de publicaciones</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Precio</th>
+      <th>Titulo</th>
+      <th>Descripcion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @publications.each do |publication| %>
+      <tr>
+        <td><%= publication.Precio %></td>
+        <td><%= publication.Titulo %></td>
+        <td><%= publication.Descripcion %></td>
+        <td><%= link_to 'Mostrar', publication %></td>
+        <td><%= link_to 'Editar', edit_publication_path(publication) %></td>
+        <td><%= link_to 'Eliminar', publication, method: :delete, data: { confirm: 'Estas seguro?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Publication', new_publication_path %>
